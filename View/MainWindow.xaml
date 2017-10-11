@@ -1,0 +1,31 @@
+﻿<telerik:RadWindow x:Class="OPC_EXPLORE.View.MainWindow"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                   xmlns:local="clr-namespace:OPC_EXPLORE"
+                   xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+                   xmlns:navigation="clr-namespace:Telerik.Windows.Controls.Navigation;assembly=Telerik.Windows.Controls.Navigation"
+                   navigation:RadWindowInteropHelper.ShowInTaskbar="True"
+                   navigation:RadWindowInteropHelper.Icon="../Resources/factory_128px.ico"
+                   Header="OPC Explore" WindowStartupLocation="CenterScreen" Height="768" Width="1024" FontSize="15">
+    <Grid>
+        <telerik:RadMenu VerticalAlignment="Top" IconColumnWidth="0">
+            <telerik:RadMenuItem Header="文件">
+                <telerik:RadMenuItem Header="退出" />
+                <telerik:RadMenuItem Header="SubItem 2" />
+            </telerik:RadMenuItem>
+            <telerik:RadMenuItem Header="OPC" >
+                <telerik:RadMenuItem Header="连接" Click="RadMenuItem_OnClick"/>
+                <telerik:RadMenuItem Header="断开" />
+                <telerik:RadMenuItem Header="状态" />
+                <telerik:RadMenuSeparatorItem/>
+                <telerik:RadMenuItem Header="参数设置" />
+                <telerik:RadMenuSeparatorItem/>
+                <telerik:RadMenuItem Header="发送" />
+                <telerik:RadMenuItem Header="读取" />
+                <telerik:RadMenuItem Header="刷新" />
+            </telerik:RadMenuItem>
+        </telerik:RadMenu>
+    </Grid>
+</telerik:RadWindow>
